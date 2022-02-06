@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" prefHeight="463.0" prefWidth="768.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="templateserver.ServerGUIController">
+    <children>
+        <Button fx:id="sendButton" layoutX="621.0" layoutY="400.0" onAction="#handleSendMessageButton" text="send" />
+      <Button fx:id="connectButton" layoutX="232.0" layoutY="154.0" mnemonicParsing="false" onAction="#handleConnectButton" prefHeight="119.0" prefWidth="254.0" text="Connect 1st" />
+      <TextField fx:id="portTextField" layoutX="66.0" layoutY="400.0" prefHeight="25.0" prefWidth="81.0" text="2015" />
+      <TextField fx:id="sendTextField" layoutX="462.0" layoutY="400.0" />
+      <GridPane fx:id="gPaneServer" alignment="CENTER" gridLinesVisible="true" layoutX="134.0" layoutY="297.0" prefHeight="86.0" prefWidth="431.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="75.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView id="imgS0" fx:id="imgS0" fitHeight="75.0" fitWidth="60.0" onMouseClicked="#handleDiscard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" />
+            <ImageView id="imgS1" fx:id="imgS1" fitHeight="75.0" fitWidth="60.0" onMouseClicked="#handleDiscard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
+            <ImageView id="imgS2" fx:id="imgS2" fitHeight="75.0" fitWidth="60.0" onMouseClicked="#handleDiscard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
+            <ImageView id="imgS3" fx:id="imgS3" fitHeight="75.0" fitWidth="60.0" onMouseClicked="#handleDiscard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" />
+            <ImageView id="imgS4" fx:id="imgS4" fitHeight="75.0" fitWidth="60.0" onMouseClicked="#handleDiscard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" />
+            <ImageView id="imgS5" fx:id="imgS5" fitHeight="75.0" fitWidth="60.0" onMouseClicked="#handleDiscard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" />
+            <ImageView id="imgS6" fx:id="imgS6" fitHeight="75.0" fitWidth="60.0" onMouseClicked="#handleDiscard" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" />
+         </children>
+      </GridPane>
+      <GridPane fx:id="gPaneClient" alignment="CENTER" gridLinesVisible="true" layoutX="133.0" layoutY="49.0" prefHeight="92.0" prefWidth="452.0">
+         <children>
+            <ImageView fx:id="imgC0" fitHeight="75.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgC1" fitHeight="75.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
+            <ImageView fx:id="imgC2" fitHeight="75.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
+            <ImageView fx:id="imgC3" fitHeight="75.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" />
+            <ImageView fx:id="imgC4" fitHeight="79.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" />
+            <ImageView fx:id="imgC5" fitHeight="77.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" />
+            <ImageView fx:id="imgC6" fitHeight="75.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" />                     
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="60.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" prefHeight="75.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Label fx:id="lblMessages" layoutX="164.0" layoutY="20.0" prefHeight="17.0" prefWidth="337.0" text="Messages for SERVER are here" />
+      <Button fx:id="startButton" layoutX="232.0" layoutY="154.0" mnemonicParsing="false" onAction="#startGame" prefHeight="119.0" prefWidth="254.0" text="Press Start 1st" />
+      <ImageView fx:id="imgDiscard" fitHeight="75.0" fitWidth="60.0" layoutX="244.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgDeck" fitHeight="75.0" fitWidth="60.0" layoutX="627.0" layoutY="176.0" onMouseClicked="#handleGetCard" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgDiscard2" fitHeight="75.0" fitWidth="60.0" layoutX="414.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgDeck2" fitHeight="75.0" fitWidth="60.0" layoutX="30.0" layoutY="168.0" onMouseClicked="#handleWrong" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="winnerLabel" layoutX="263.0" layoutY="168.0" prefHeight="92.0" prefWidth="193.0" />
+      <Button fx:id="resetButton" layoutX="291.0" layoutY="273.0" mnemonicParsing="false" onAction="#resetFunction" prefHeight="32.0" prefWidth="116.0" text="Reset" />
+      <ListView fx:id="topList" layoutX="7.0" layoutY="106.0" prefHeight="200.0" prefWidth="200.0" />
+ 
+    </children>
+</AnchorPane>
